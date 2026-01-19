@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Navbar */
+
+/* Navbar Container */
+.navigation-header {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+
+    align-items: center;
+    font-family: "bebas neue";
+    font-weight: 500;
+    background: #ffffff;
+    height: 8vh;
+    margin-top: 1rem;
+}
+
+/*Navbar items */
+.logo {
+    width: 20vh;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 4rem;
+
+}
+
+.nav-button {
+    position: relative;
+
+    font-size: 24px;
+    color: #034e90;
+
+    text-decoration: none;
+    list-style: none;
+
+    white-space: nowrap;
+    flex-shrink: 1;
+
+    transition: color 0.2s ease;
+
+}
+
+.nav-button:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* animaçao hover linha vermelha */
+.nav-button::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+
+    width: 0;
+    height: 3px;
+
+    background-color: #e41f2a;
+    border-radius: 2px;
+
+    transition:
+        width 0.25s ease,
+        left 0.25s ease;
+}
+
+/* Botão link do whatsapp */
+
+.zap-button-header {
+    display: flex;
+    align-items: center;
+    /* centraliza verticalmente */
+    justify-content: center;
+    /* centraliza horizontalmente */
+    gap: 10px;
+
+    /*Margem na Direita do Botão do zap*/
+    margin-right: 5em;
+
+    background-color: #034e90;
+    color: #ffffff;
+
+    padding: 10px 40px;
+    border-radius: 20px;
+    background-color: #034e90;
+    box-shadow: 0 6px 16px rgba(3, 78, 144, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.zap-button-header:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(3, 78, 144, 0.35);
+}
+
+a, span.zap-button:visited {
+    font-family: "bebas neue";
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+}
+
+.zap-button-header-image {
+    width: 20px;
+}
+
+.menu-mobile {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+
+    .navigation-header {
+        justify-content: space-between;
+        padding: 0 2rem;
+    }
+
+    .nav-list li {
+        margin-left: 2rem;
+        letter-spacing: 2px;
+    }
+
+    .nav-button {
+        font-size: 20px;
+    }
+
+    .zap-button-header {
+        padding: 8px 28px;
+        margin-right: 0;
+    }
+
+    .menu-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .navigation-header {
+        height: auto;
+        padding: 1rem;
+    }
+
+    .nav-list li {
+        margin-left: 1.5rem;
+    }
+
+    .nav-button {
+        font-size: 18px;
+    }
+
+    /* remove hover (mobile não tem hover real) */
+    .nav-button::after {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .navigation-header {
+        justify-content: space-between;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 100%;
+        right: 0;
+
+        flex-direction: column;
+        align-items: center;
+
+        background: #ffffff;
+        width: 100%;
+
+        max-height: 0;
+        overflow: hidden;
+
+        transition: max-height 0.3s ease;
+    }
+
+    .nav-list li {
+        margin: 1.5rem 0;
+    }
+
+    .nav-list.active {
+        max-height: 500px;
+    }
+
+    .zap-button-header {
+        display: none;
+    }
+
+    /* botão hamburguer */
+    .menu-mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+    }
+
+    .menu-mobile span {
+        width: 26px;
+        height: 3px;
+        background: #034e90;
+        border-radius: 2px;
+    }
+}

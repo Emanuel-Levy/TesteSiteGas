@@ -13,204 +13,10 @@
    DESKTOP
    ========================= */
 
-/*Container: Logo e Menu */
-.desktop-header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    gap: 1rem;
-
-
-    flex-wrap: nowrap;
-
-    box-shadow: 1px 1px 1px 1px #dae2eb;
-    /* mantém em linha no desktop */
-}
-
-/*Container: Logo */
-.header-left {
-    flex: 1;
-
-}
-
-/*Item: Logo */
-.Header-Left-Logo-Icon {
-    width: 200px;
-    padding: 20px 0px;
-
-    /*Margem na esquerda da Logo*/
-    margin-left: 5em;
-}
-
-/*Container: Menu */
-.Header-Right-Menu-Bar {
-    flex: 3;
-    display: flex;
-    justify-content: center;
-
-    gap: 3rem;
-
-}
-/*Item: Botões do Menu */
-.nav-button {
-    position: relative;
-    /* obrigatório para o ::after */
-    text-decoration: none;
-    color: #034e90;
-    font-size: 26px;
-    font-family: 'Bebas Neue', cursive;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-    white-space: nowrap; /* impede quebra interna */
-    flex-shrink: 1;      /* permite encolher */
-
-    padding: 8px 28px;   /* padding mais inteligente */
-    
-    
-
-    background-color: transparent;
-    font-weight: 500;
-
-    transform: translateY(0);
-    transition:
-        color 0.25s ease,
-        background-color 0.25s ease,
-        transform 0.15s ease;
-}
-
-.nav-button:hover {
-    
-    color: #034e90;
-    transform: translateY(-2px);
-}
-/*Animação linha vermelha - Nav Button*/
-.nav-button::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -8px;
-
-    width: 0;
-    height: 3px;
-
-    background-color: #e41f2a;
-    border-radius: 2px;
-
-    transition:
-        width 0.25s ease,
-        left 0.25s ease;
-}
-
-/* Hover */
-.nav-button:hover::after {
-    width: 100%;
-    left: 0;
-}
-
-/*Container: Botão Zap */
-.zap-button-header {
-    display: flex;
-    align-items: center;       /* centraliza verticalmente */
-    justify-content: center;   /* centraliza horizontalmente */       
-    gap: 10px;  
-
-    /*Margem na Direita do Botão do zap*/
-    margin-right: 5em;
-    
-    background-color: #034e90;
-    color: #ffffff;
-    
-    padding: 10px 40px;
-    border-radius: 20px;
-    background-color: #034e90;
-    box-shadow: 0 6px 16px rgba(3, 78, 144, 0.25);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.zap-button-header:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 24px rgba(3, 78, 144, 0.35);
-}
-a,
-span.zap-button{
-
-    font-weight: 800;
-    font-size: large;
-    text-decoration: none;
-    color: #ffffff;
-}
-a,
-span.zap-button:visited{
-    font-weight: 500;
-    font-size: large;
-    text-decoration: none;
-    color: #ffffff;
-    text-align: center;
-}
-.zap-button-header-image{
-    width: 20px;
-
-}
-/*Item: Botão de menu */
-.Menu-button-mobileonly {
-    display: none;
-}
 /*Responsividade Tela Intermediaria */
-@media (max-width: 1200px) {
-    .Header-Right-Menu-Bar {
-        gap: 1rem;
-        flex-wrap: nowrap;
-    }
 
-    .nav-button {
-        padding: 6px 20px;
-        font-size: 15px;
-
-        white-space: nowrap;
-        flex-shrink: 1;
-    }
-}
 /*Responsividade Mobile */
-@media (max-width: 768px) {
 
-
-    .nav-button {
-        margin-left: 0;
-        margin-bottom: 12px;
-
-        width: 100%;
-        text-align: center;
-
-        padding: 16px;
-        font-size: 18px;
-    }
-
-    /* Remove animação de hover (mobile não tem hover real) */
-    .nav-button::after {
-        display: none;
-    }
-
-    /* Feedback de toque */
-    .nav-button:active {
-        background-color: #f98c26;
-        color: #042d4d;
-        transform: none;
-    }
-
-    .Menu-button-mobileonly {
-        display: block;
-    }
-
-    .zap-button-header {
-        display: none;
-    }
-
-    .Header-Right-Menu-Bar {
-        display: none;
-    }
-
-
-}
 /*Titulo Vantagens */
 .titulo-secao {
   display: flex;
@@ -227,6 +33,7 @@ span.zap-button:visited{
   text-align: center;
   font-size: clamp(22px, 4vw, 34px);
   font-weight: 700;
+  font-family: 'Roboto', sans-serif;
 }
 
 .linha {
@@ -286,12 +93,6 @@ span.zap-button:visited{
     align-items: center;
     gap: 10px;
 
-    text-shadow:
-        1px 1px 2px rgba(0, 0, 0, 0.45),
-       -1px -1px 2px rgba(0, 0, 0, 0.45),
-        1px -1px 2px rgba(0, 0, 0, 0.45),
-       -1px 1px 2px rgba(0, 0, 0, 0.45);
-
     box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
     transition: all 0.25s ease;
 
@@ -328,4 +129,196 @@ span.zap-button:visited{
         font-size: 16px;
         padding: 12px 22px;
     }
+}
+
+.Gas-Image-Container {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.Gas-Image-Container h1 {
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.Gas-Image-Container p {
+    font-size: 22px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Vantagens Grid */
+
+.vantagens {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.vantagens h2 {
+  font-size: 32px;
+  margin-bottom: 50px;
+
+}
+
+.vantagens-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.card img {
+  width: 70px;
+  height: auto;
+}
+
+.card h3 {
+  font-size: 25px;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.card p {
+  font-size: 19px;
+  color: #666;
+  line-height: 1.5;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* 4º card começa na coluna 2 */
+.vantagens-grid .card:nth-child(4) {
+  grid-column: 1;
+}
+
+/* 5º card começa na coluna 3 */
+.vantagens-grid .card:nth-child(5) {
+  grid-column: 2;
+}
+
+.card img {
+  transition: transform 0.25s ease;
+}
+
+.card:hover img {
+  transform: translateY(-4px);
+}
+
+
+/* Responsividade Vantagens Grid */
+@media (max-width: 768px) {
+  .vantagens-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .vantagens-grid .card {
+    grid-column: auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .linha {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .Gas-Image-Container h1 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .Gas-Image-Container p {
+    font-size: 17px;
+    line-height: 1.6;
+    padding: 0 10px;
+  }
+}
+/* Aba de vídeo da página principal */
+.video-container h2 {
+    font-size: 44px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 60px;
+    color: white;
+}
+.video-container iframe {
+    width: min(90%, 380px);
+    aspect-ratio: 9 / 16;
+    height: auto;
+    border: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 60px;
+    margin-top: 40px;
+    background: #000;
+    padding: 12px;
+    border-radius: 18px;
+    
+}
+
+.video-container {
+    text-align: center;
+    background: linear-gradient(135deg, #b11116, #f5060e);
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.video-subtitle {
+  color: #ffecec;
+  font-size: 28px;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  padding-bottom: 40px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+/* Responsividade vídeo página principal */
+@media (max-width: 768px) {
+
+  .video-container {
+    padding: 30px 16px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #c5161d 0%, #a51217 100%);
+  }
+
+  .video-container h2 {
+    font-size: 26px;
+    line-height: 1.2;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 16px;
+  }
+
+  .video-container iframe {
+    width: 100%;
+    max-width: 200px;
+    aspect-ratio: 9 / 16;
+    height: auto;
+
+    margin: 0 auto 24px;
+    display: block;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  }
+
+  .video-subtitle {
+    font-size: 16px;
+    line-height: 1.4;
+    padding: 0 10px;
+  }
 }

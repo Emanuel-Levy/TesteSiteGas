@@ -4,34 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/servicos.css">
-    <script src="Mainpage.js"></script>
+    <link rel="stylesheet" href="/CSS/Header.css">
+    <link rel="stylesheet" href="/CSS/servicos.css">
+    <script src="/JS/servicos.js" defer></script>
     <title>JW Gás - Serviços</title>
 </head>
 
 <body>
     <!-- Cabeçalho: Logo e Menu -->
-    <header class="desktop-header">
-        <div class="Header-Left">
-            <a href="index.html"><img src="../IMG/logo.png" alt="Logo da empresa" class="Header-Left-Logo-Icon"></a>
-        </div>
-
-        <div class="Header-Right-Menu-Bar">
-            <nav class="Navigation-Header">
-                <a href="#" class="nav-button">Serviços</a>
-                <a href="#" class="nav-button">Onde Atendemos</a>
-                <a href="#" class="nav-button">Sobre Nós</a>
-            </nav>
-        </div>
-        <a href="https://wa.link/vn7qfx" target="_blank">
-            <div class="zap-button-header">
-                <img src="../IMG/zap.png" alt="Imagem do zap" srcset="" class="zap-button-header-image">
-                <span class="zap-button">(83) 99854-0067</span>
+    <header>
+        <nav class="navigation-header">
+            <a href="/HTML/index.html"><img class="logo" src="/IMG/logo.png" alt="" srcset=""></a>
+            <ul class="nav-list">
+                <li><a href="/HTML/index.html" class="nav-button">Inicio</a></li>
+                <li><a href="/HTML/servicos.html" class="nav-button">Serviços</a></li>
+                <li><a href="" class="nav-button">Onde Atendemos</a></li>
+                <li><a href="" class="nav-button">Sobre Nós</a></li>
+            </ul>
+            <a href="https://wa.link/vn7qfx" target="_blank">
+                <div class="zap-button-header">
+                    <img src="../IMG/zap.png" alt="Imagem do zap" srcset="" class="zap-button-header-image">
+                    <span class="zap-button">(83) 99854-0067</span>
+                </div>
+            </a>
+            <div class="menu-mobile">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-        </a>
-        <div class="Menu-button-mobileonly">
-            <button>≡</button>
-        </div>
+
+        </nav>
     </header>
     <!-- Conteúdo principal -->
     <main>
@@ -57,7 +59,7 @@
 
             <details id="faq1" class="accordion">
                 <summary class="faq-title">
-                        01. Vocês entregam gás à noite e aos domingos?
+                    01. Vocês entregam gás à noite e aos domingos?
                 </summary>
                 <div class="faq-content">
                     <li>Entrega e atendimento humanizado 24h em toda João Pessoa inclusive domingos.</li>
@@ -68,15 +70,17 @@
                     02.Fazem entrega para empresas e condomínios?
                 </summary>
                 <div class="faq-content">
-                    <li>Sim! Atendemos residências, comércios, condomínios e até restaurantes com fornecimento contínuo.</li>
+                    <li>Sim! Atendemos residências, comércios, condomínios e até restaurantes com fornecimento contínuo.
+                    </li>
                 </div>
             </details>
             <details id="faq3" class="accordion">
                 <summary class="faq-title">
-                        03. Qual a segurança de comprar com a JW Gás?
+                    03. Qual a segurança de comprar com a JW Gás?
                 </summary>
                 <div class="faq-content">
-                        <li>Todos os nossos botijões são certificados, lacrados , passam por verificação e são entregues em segurança na sua residencia.</li>
+                    <li>Todos os nossos botijões são certificados, lacrados , passam por verificação e são entregues em
+                        segurança na sua residencia.</li>
                 </div>
             </details>
             <details id="faq4" class="accordion">
@@ -84,7 +88,8 @@
                     04. Quais formas de pagamento vocês aceitam?
                 </summary>
                 <div class="faq-content">
-                    <li>Trabalhamos com: dinheiro, Pix, cartões de crédito e débito, além de TED (Transferencias bancarias).</li>
+                    <li>Trabalhamos com: dinheiro, Pix, cartões de crédito e débito, além de TED (Transferencias
+                        bancarias).</li>
                 </div>
             </details>
 

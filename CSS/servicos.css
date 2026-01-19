@@ -88,168 +88,6 @@
     cursor: default;
 }
 
-/* =========================
-   DESKTOP - Nav Bar
-   ========================= */
-
-/*Container: Logo e Menu */
-.desktop-header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    gap: 1rem;
-
-
-    flex-wrap: nowrap;
-
-    box-shadow: 1px 1px 1px 1px #dae2eb;
-    /* mantém em linha no desktop */
-}
-
-/*Container: Logo */
-.header-left {
-    flex: 1;
-
-}
-
-/*Item: Logo */
-.Header-Left-Logo-Icon {
-    width: 200px;
-    padding: 20px 0px;
-
-    /*Margem na esquerda da Logo*/
-    margin-left: 5em;
-}
-
-/*Container: Menu */
-.Header-Right-Menu-Bar {
-    flex: 3;
-    display: flex;
-    justify-content: center;
-
-    gap: 3rem;
-
-}
-
-/*Item: Botões do Menu */
-.nav-button {
-    position: relative;
-    /* obrigatório para o ::after */
-    text-decoration: none;
-    color: #034e90;
-    font-size: 26px;
-    font-family: 'Bebas Neue', cursive;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-    white-space: nowrap;
-    /* impede quebra interna */
-    flex-shrink: 1;
-    /* permite encolher */
-
-    padding: 8px 28px;
-    /* padding mais inteligente */
-
-
-
-    background-color: transparent;
-    font-weight: 500;
-
-    transform: translateY(0);
-    transition:
-        color 0.25s ease,
-        background-color 0.25s ease,
-        transform 0.15s ease;
-}
-
-.nav-button:hover {
-
-    color: #034e90;
-    transform: translateY(-2px);
-}
-
-/*Animação linha vermelha - Nav Button*/
-.nav-button::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -8px;
-
-    width: 0;
-    height: 3px;
-
-    background-color: #e41f2a;
-    border-radius: 2px;
-
-    transition:
-        width 0.25s ease,
-        left 0.25s ease;
-}
-
-/* Hover */
-.nav-button:hover::after {
-    width: 100%;
-    left: 0;
-}
-
-/*Container: Botão Zap */
-.zap-button-header {
-    display: flex;
-    align-items: center;
-    /* centraliza verticalmente */
-    justify-content: center;
-    /* centraliza horizontalmente */
-    gap: 10px;
-
-    /*Margem na Direita do Botão do zap*/
-    margin-right: 5em;
-
-    background-color: #034e90;
-    color: #ffffff;
-
-    padding: 10px 40px;
-    border-radius: 20px;
-    background-color: #034e90;
-    box-shadow: 0 6px 16px rgba(3, 78, 144, 0.25);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.zap-button-header:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 24px rgba(3, 78, 144, 0.35);
-}
-
-a,
-span.zap-button {
-    font-family: "bebas neue";
-    font-size: 24px;
-    font-weight: 500;
-    letter-spacing: 0.8px;
-    font-size: large;
-    text-decoration: none;
-    color: #ffffff;
-}
-
-a,
-span.zap-button:visited {
-    font-family: "bebas neue";
-    font-size: 24px;
-    font-weight: 500;
-    letter-spacing: 0.8px;
-    text-decoration: none;
-    color: #ffffff;
-    text-align: center;
-}
-
-.zap-button-header-image {
-    width: 20px;
-
-}
-
-/*Item: Botão de menu */
-.Menu-button-mobileonly {
-    display: none;
-}
 
 /* =========================
    DESKTOP - CSS GRID
@@ -386,19 +224,6 @@ img.product {
 
 /*Responsividade Tela Intermediaria */
 @media (max-width: 1450px) {
-    .Header-Right-Menu-Bar {
-        gap: 1rem;
-        flex-wrap: nowrap;
-    }
-
-    .nav-button {
-        padding: 6px 20px;
-        font-size: 15px;
-
-        white-space: nowrap;
-        flex-shrink: 1;
-    }
-
     .servicos-items {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 470px));
@@ -425,18 +250,6 @@ img.product {
 }
 
 @media (max-width: 1200px) {
-    .Header-Right-Menu-Bar {
-        gap: 1rem;
-        flex-wrap: nowrap;
-    }
-
-    .nav-button {
-        padding: 6px 20px;
-        font-size: 15px;
-
-        white-space: nowrap;
-        flex-shrink: 1;
-    }
 
     .servicos-items {
         display: grid;
@@ -464,19 +277,6 @@ img.product {
 }
 
 @media (max-width: 1150px) {
-
-    .Header-Right-Menu-Bar {
-        gap: 1rem;
-        flex-wrap: nowrap;
-    }
-
-    .nav-button {
-        padding: 6px 20px;
-        font-size: 15px;
-
-        white-space: nowrap;
-        flex-shrink: 1;
-    }
 
     .servicos-items {
         display: grid;
@@ -552,65 +352,6 @@ img.product {
         margin: 0px;
         box-shadow: 1px 1px #000;
         border-top: 1px solid #000;
-    }
-
-    .desktop-header {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-
-        gap: 1rem;
-
-
-        flex-wrap: nowrap;
-
-        box-shadow: 1px 1px 1px 1px #dae2eb;
-        /* mantém em linha no desktop */
-    }
-
-    .Navigation-header {
-        display: none;
-    }
-
-    .Header-Left-Logo-Icon {
-        width: 200px;
-        padding: 20px 0px;
-        margin-left: 0rem;
-    }
-
-    .nav-button {
-        margin-left: 0;
-        margin-bottom: 12px;
-
-        width: 100%;
-        text-align: center;
-
-        padding: 16px;
-        font-size: 18px;
-    }
-
-    /* Remove animação de hover (mobile não tem hover real) */
-    .nav-button::after {
-        display: none;
-    }
-
-    /* Feedback de toque */
-    .nav-button:active {
-        background-color: #f98c26;
-        color: #042d4d;
-        transform: none;
-    }
-
-    .Menu-button-mobileonly {
-        display: block;
-    }
-
-    .zap-button-header {
-        display: none;
-    }
-
-    .Header-Right-Menu-Bar {
-        display: none;
     }
 
     .servicos-items {
